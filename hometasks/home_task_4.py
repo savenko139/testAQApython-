@@ -4,6 +4,8 @@
 n = int(input('Enter width of triangle: '))
 c = 0
 
+print('Треугольник №1')
+
 while n > c:
     print('*' * n)
     n -= 1
@@ -12,6 +14,8 @@ while n > c:
 
 n = int(input('Enter width of triangle: '))
 c = 1
+
+print('Треугольник №2')
 
 while c <= n:
     print('*' * c)
@@ -24,6 +28,8 @@ while c <= n:
 n = int(input('Enter width of triangle: '))
 i = 0
 
+print('Треугольник №3')
+
 while i < n:
     print(' ' * i + '*' * (n - i))
     i += 1
@@ -32,6 +38,8 @@ while i < n:
 
 n = int(input('Enter width of triangle: '))
 c = 0
+
+print('Треугольник №4')
 
 while c < n:
     c += 1
