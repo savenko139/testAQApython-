@@ -7,10 +7,10 @@
 
 def change(lst: list):
     if len(lst) < 2:
-        return 'В списке должно быть минимум 2 элемента'
+        print('В списке должно быть минимум 2 элемента')
     else:
         lst[-1], lst[0] = lst[0], lst[-1]
-        return lst
+        print(lst)
 
 """
 Задание 2
@@ -32,6 +32,8 @@ def to_dict2(lst):                     # Но потом поигрался и �
     new_dict2 = {i: i for i in lst}
     return new_dict2
 
+
+
 """
 Задание 3
 Напишите функцию sum_range(start, end), которая суммирует все целые числа от значения «start» до величины «end» 
@@ -47,7 +49,8 @@ def sum_range(start: int, end: int) -> int:
     else:
         for i in range (start, end+1):
             sumch += i
-    return sumch
+    print(sumch)
+
 
 """
 Задание 4
@@ -55,11 +58,14 @@ def sum_range(start: int, end: int) -> int:
 последние строки в количестве lines (на всякий случай проверим, что задано положительное целое число)
 """
 
-def read_last(lines: int, file):
+def read_last(lines: int, file: str):
     if lines <= 0:
-        print('Введите положительное целое число')
+        print('Enter number > 0')
     else:
-        with open(file) as text:
-            file_lines = text.readlines()[-lines:]
-        for line in file_lines:
-            print(line.strip())
+        try:
+            with open(file) as text:
+                file_lines = text.readlines()[-lines:]
+            for line in file_lines:
+                print(line.strip())
+        except FileNotFoundError as e:
+            print(e)
