@@ -6,12 +6,12 @@
 """
 
 def change(lst: list):
-    if len(list) < 2:
+    if len(lst) < 2:
         return 'В списке должно быть минимум 2 элемента'
     else:
-        list[-1], list[0] = list[0], list[-1]
-        return list
-#
+        lst[-1], lst[0] = lst[0], lst[-1]
+        return lst
+
 """
 Задание 2
 Напишите функцию to_dict(lst), которая принимает аргумент в виде списка и возвращает словарь, в котором каждый элемент 
