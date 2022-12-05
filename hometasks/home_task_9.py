@@ -11,11 +11,23 @@ is_power_of_two(125) # 'no' потому что это не степень дв�
 
 """
 
-def is_power_of_two(number: int):
-    i = 0
-    while 2**i < number:
-        i += 1
-    if 2**i == number:
-        return 'YES'
-    else:
+# def is_power_of_two(number: int):
+#     i = 0
+#     while 2**i < number:
+#         i += 1
+#     if 2**i == number:
+#         return 'YES'
+#     else:
+#         return 'NO'
+
+
+def is_power_of_two2(number: int):
+    if number%1:
         return 'NO'
+    if number>2:
+        return is_power_of_two2(number/2)
+    if number:
+        return 'YES'
+    return 'NO'
+
+
