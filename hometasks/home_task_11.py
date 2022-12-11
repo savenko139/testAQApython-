@@ -20,5 +20,3 @@ def get_random_string(length: int) -> str:
     random_str = ''.join(res)
     return random_str
 
-
-print(get_random_string(17))
