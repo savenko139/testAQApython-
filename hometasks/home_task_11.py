@@ -23,8 +23,8 @@
 def get_random_string(length: int) -> str:
     import random
     numbers = [i for i in range(48, 58)]
-    chars_upper = [k for k in range(65, 90)]
-    chars_lower = [g for g in range(100, 123)]
+    chars_upper = [k for k in range(65, 91)]
+    chars_lower = [g for g in range(97, 123)]
     final = numbers + chars_upper + chars_lower
     gen_list = random.choices(final, k=length)
     res = []
@@ -33,3 +33,4 @@ def get_random_string(length: int) -> str:
     random_str = ''.join(res)
     return random_str
 
+print(get_random_string(25))
