@@ -38,3 +38,5 @@ colleague2 = Colleague(mediator)
 
 colleague1.send("Hello from colleague 1!")
 colleague2.send("Greetings from colleague 2!")
+
+colleague1.send("Check yor time!")
